@@ -9,6 +9,7 @@ public class TestEmployeeDetails {
         employee.setName("Rajeev");
         employee.setAge(25);
         employee.setMonthlySalary(8000);
+        System.out.println(employee.toString());
         System.out.println("begin testCalculateAppriasal");
         double appraisal = empBusinessLogic.calculateAppraisal(employee);
         Assert.assertEquals(500, appraisal, 0.0, "500");
@@ -21,6 +22,7 @@ public class TestEmployeeDetails {
         employee.setName("Rajeev");
         employee.setAge(25);
         employee.setMonthlySalary(8000);
+        System.out.println(employee.toString());
         System.out.println("begin testCalculateYearlySalary");
         double salary = empBusinessLogic.calculateYearlySalary(employee);
         Assert.assertEquals(96000, salary, 0.0, "8000");
