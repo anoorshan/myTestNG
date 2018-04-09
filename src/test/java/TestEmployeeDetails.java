@@ -10,7 +10,7 @@ public class TestEmployeeDetails {
         employee.setAge(25);
         employee.setMonthlySalary(8000);
         System.out.println(employee.toString());
-        System.out.println("begin testCalculateAppriasal");
+        System.out.println("begin testCalculateAppriasal ！");
         double appraisal = empBusinessLogic.calculateAppraisal(employee);
         Assert.assertEquals(500, appraisal, 0.0, "500");
     }
