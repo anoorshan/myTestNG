@@ -20,4 +20,17 @@ public class EmpBusinessLogic {
 
         return appraisal;
     }
+
+    // Calculate the allowance of employee
+    public int calculateAllowance(EmployeeDetails employeeDetails){
+        int allowance = 0;
+        if(employeeDetails.getAge() > 50){
+            allowance = 5000;
+        }
+        return allowance;
+    }
+    //Calculate the total income of employee
+    public double calculateTotalIncome(EmployeeDetails employeeDetails){
+        return calculateYearlySalary(employeeDetails) + calculateAppraisal(employeeDetails) + calculateAllowance(employeeDetails);
+    }
 }

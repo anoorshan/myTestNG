@@ -2,9 +2,52 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name = "Suite1">
-    <test name = "test1">
+    <parameter name = "myName" value="chaishanshan"/>
+    <test name = "testEmployee">
         <classes>
             <class name = "TestEmployeeDetails"/>
+        </classes>
+    </test>
+    <test name = "testMessage">
+        <groups>
+            <define name = "all">
+                <include name = "functest"/>
+                <include name = "checkintest"/>
+            </define>
+            <define name = "func">
+                <include name = "functest"/>
+            </define>
+            <run>
+                <include name = "all" />
+            </run>
+        </groups>
+        <classes>
+            <class name = "TestMessageUtil"/>
+            <class name="ExpectedExceptionTest"/>
+        </classes>
+    </test>
+    <test name="test1">
+        <classes>
+            <class name="DependencyTestUsingAnnotation"/>
+        </classes>
+    </test>
+    <test name="test2">
+
+        <parameter name = "myName" value="css"/>
+        <parameter name = "id" value="1"/>
+        <parameter name="isFemale" value="true"/>
+        <parameter name="score" value="A"/>
+        <parameter name="time" value="1523284190"/>
+
+        <classes>
+            <class name="ParameterizedTest1"/>
+            <class name="ParamTestWithDataProvider1"/>
+            <class name="TestCalculatorExcel" />
+        </classes>
+    </test>
+    <test name="testRegExp">
+        <classes>
+            <class name="TestValidateUserInfWIthDataProvider"/>
         </classes>
     </test>
 </suite>
